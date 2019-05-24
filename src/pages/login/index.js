@@ -3,25 +3,28 @@ import auth from '../../authorization.json';
 import api from '../../services/api';
 
 export default class Login extends Component {
-  state = {
-    CLIENT_KEY: ''
+  constructor(props) {
+    super(props);
+    this.getClientKey = this.getClientKey.bind(this);
   }
+  state = {}
 
   componentDidMount() {
-    console.log(this.state)
   }
-
+  
   getClientKey = () => {
     const url = window.location.href;
     const clientID = url.slice(url.lastIndexOf('access_token=')+13, url.lastIndexOf('&token_type'));
-
+    
     this.setState({ CLIENT_KEY: clientID });
+    console.log(clientID)
+    console.log(this.state)
   }
-
+  
   redirectLogin = async (e) => {
     e.preventDefault();
-    window.location = `${auth.URL}?response_type=${auth.RESPONSE_TYPE}&client_id=${auth.CLIENT_ID}&scope=${auth.SCOPE}&redirect_uri=${auth.REDIRECT_URI}`;
-
+    window.location = await `${auth.URL}?response_type=${auth.RESPONSE_TYPE}&client_id=${auth.CLIENT_ID}&scope=${auth.SCOPE}&redirect_uri=${auth.REDIRECT_URI}`;
+    
     this.getClientKey()
   }
 
