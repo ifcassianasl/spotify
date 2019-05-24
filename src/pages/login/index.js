@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import auth from '../../authorization.json';
 import api from '../../services/api';
+import Axios from 'axios';
 
 export default class Login extends Component {
   constructor(props) {
     super(props);
     this.getClientKey = this.getClientKey.bind(this);
   }
+
   state = {}
 
   componentDidMount() {
@@ -17,8 +19,8 @@ export default class Login extends Component {
     const clientID = url.slice(url.lastIndexOf('access_token=')+13, url.lastIndexOf('&token_type'));
     
     this.setState({ CLIENT_KEY: clientID });
-    console.log(clientID)
-    console.log(this.state)
+    console.log(this.state);
+    this.isAuth();
   }
   
   redirectLogin = async (e) => {
@@ -29,7 +31,8 @@ export default class Login extends Component {
   }
 
   isAuth = async () => {
-    return await api.get(`${auth.AUTH_URL}?`);
+    // return await api.get(`${auth.AUTH_URL}?`);
+    Axios.post('https://accounts.spotify.com/api/token');
   }
 
   render() {
