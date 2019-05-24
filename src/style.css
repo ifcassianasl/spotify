@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(32, 30, 41);
+  color: rgb(220, 220, 220);
+  font-family: 'Times New Roman', Times, serif;
+}

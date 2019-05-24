@@ -1,0 +1,8 @@
+{
+  "CLIENT_ID": "b3369a785054467bbd5cf5332c53e0a6",
+  "SCOPE":"user-read-private user-read-email",
+  "REDIRECT_URI": "http://localhost:3000/callback/",
+  "RESPONSE_TYPE": "token",
+  "URL": "https://accounts.spotify.com/authorize",
+  "AUTH_URL":"https://accounts.spotify.com/authorize"
+}
