@@ -22,8 +22,8 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 const Routes = () => (
   <BrowserRouter>
     <Switch>
-      <Route path="/artists" component={Artists} />
-      <PrivateRoute exact path="/" component={Login} />
+      <PrivateRoute path="/callback" component={Artists} />
+      <Route exact path="/" component={Login} />
       {/* <Route path="/artists/:id" component={Artist} />  */}
     </Switch>
   </BrowserRouter>

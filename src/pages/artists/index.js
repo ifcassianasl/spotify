@@ -35,8 +35,8 @@ export default class Artists extends Component {
         return(
             <div id="artists">
                 {artists.map(artist => (
-                    <div class="artist">
-                        <Link to={`/artists/${artist.id}`} class="artist">
+                    <div key={artist.id} className="artist">
+                        <Link to={`/artists/${artist.id}`} className="artist">
                             <img src={artist.images[1].url} alt={artist.name} />
                             <h2>{artist.name}</h2>
                         </Link>
