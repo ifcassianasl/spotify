@@ -1,0 +1,28 @@
+div#login {
+  display: flex;
+  /* align-self: stretch; */
+  align-items: center;
+  flex-direction: column;
+  /* height: 100%; */
+  width: 50%;
+  background: rgb(40, 36, 52);
+  border: 1px solid rgb(87, 77, 116);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+div#login h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+div#login button {
+  background: rgb(87, 77, 116);
+  border: none;
+  height: 30px;
+  width: 175px;
+  padding: 3px;
+  color: #fff;
+  font-size: 13px;
+  border-radius: 7px;
+}

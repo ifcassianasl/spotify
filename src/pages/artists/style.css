@@ -1,0 +1,37 @@
+div#artists {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  align-self: center;
+}
+
+div.artist {
+  justify-content: center;
+  background: rgb(40, 36, 52);
+  border: 1px solid rgb(87, 77, 116);
+  padding: 25px;
+  border-radius: 15px;
+  transition: all 0.4s;
+}
+
+div.artist:hover {
+  background: rgb(87, 77, 116);
+  border: 0;
+}
+
+div.artist a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #fff;
+}
+
+div.artist a img{
+  border-radius: 15px;
+}
+
+div.artist a h2{
+  margin-top: 10px;
+}
